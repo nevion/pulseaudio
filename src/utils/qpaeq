@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #    qpaeq is a equalizer interface for pulseaudio's equalizer sinks
-#    Copyright (C) 2009  Jason Newton <nevion@gmail.com
+#    Copyright (C) 2009  Jason Newton <nevion@gmail.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,6 +22,8 @@ try:
     from PyQt4 import QtGui,QtCore
     import dbus.mainloop.qt
     import dbus
+    import sip
+    sip.enableautoconversion(False) #prefer manual conversions
 except ImportError as e:
     sys.stderr.write('There was an error importing needed libraries\n'
                      'Make sure you have qt4 and dbus-python installed\n'
